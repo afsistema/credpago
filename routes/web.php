@@ -24,3 +24,4 @@ Route::get('/url', [UrlController::class, 'index'])->name('indexUrl');
 Route::get('/url/create/{id}', [UrlController::class, 'create'])->name('createUrl');
 Route::post('/url/create/{id}', [UrlController::class, 'save'])->name('createUrlSave');
 Route::get('/url/show/{id}', [UrlController::class, 'show'])->name('createUrlShow');
+Route::get('/url/delete/{id}', [UrlController::class, 'delete'])->name('deleteUrl');

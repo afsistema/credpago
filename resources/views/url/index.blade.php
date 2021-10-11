@@ -47,7 +47,10 @@
                                     @endif
                                     <a href="{{ url('/url') }}/create/{{ $url->id }}" class="btn btn-secondary">
                                         Editar
-                                    </a>                                                                  
+                                    </a>   
+                                    <a href="{{ url('/url') }}/delete/{{ $url->id }}" class="btn btn-danger">
+                                        Excluir
+                                    </a>                                                               
                                 </td>
                             </tr>
                             @endforeach

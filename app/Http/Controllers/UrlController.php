@@ -48,4 +48,13 @@ class UrlController extends Controller
         $url = Url::findOrNew($id);
         return view('url/show', compact('url'));
     }
+
+    public function delete($id, Request $request)
+    {
+        $url = Url::find($id);
+        $url->logs()->delete();
+        $url->delete();
+        $request->session()->flash('status', 'Url apagada com sucesso!');
+        return redirect('/url');
+    }
 }
